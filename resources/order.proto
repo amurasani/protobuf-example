@@ -1,3 +1,5 @@
+syntax = "proto3"; 
+
 package example;
 
 option java_package = "com.protobuf.order";
@@ -5,8 +7,8 @@ option java_outer_classname = "OrderProto";
 
 message Order {
 
-    required int32 order_id = 1;
-    required string order_address = 2;
-    required string name = 3;
+    int32 order_id = 1;
+    string order_address = 2;
+    string name = 3;
 
 }
