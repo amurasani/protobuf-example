@@ -12,8 +12,6 @@ Read https://developers.google.com/protocol-buffers/docs/javatutorial to know mo
 * Download latest protobuf from https://developers.google.com/protocol-buffers/docs/downloads and follow readme to 
 create protoc executable.
 
-<h3> Running the examples </h3>
-* mvn idea:idea
-* mvn compile
-* Run any example from idea.
+<h3> Compile the repo </h3>
+* mvn clean install
 
