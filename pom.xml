@@ -4,7 +4,7 @@
     <src.dir>src</src.dir>
   </properties>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.interview.missionpeace</groupId>
+  <groupId>com.example.protobuf</groupId>
   <artifactId>protobuf-example</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
@@ -23,6 +23,7 @@
             <exec executable="protoc">
               <arg value="--java_out=generated" />
               <arg value="resources/order.proto" />
+              <arg value="resources/schedule.proto" />
             </exec>
           </tasks>
           <sourceRoot>generated</sourceRoot>

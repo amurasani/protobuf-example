@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package example;
+
+import "google/protobuf/timestamp.proto";
+
+option java_package = "com.protobuf.schedule";
+option java_outer_classname = "ScheduleProto";
+
+message Schedule {
+
+    int32 id = 1;
+    int64 version = 2;
+    repeated LegInformation legs = 3;
+    bool hosted = 4;
+
+}
+
+message LegInformation {
+
+    string id = 1;
+    int32 order = 2;
+    string departureCityCode = 3;
+    google.protobuf.Timestamp departureTime = 4;
+    google.protobuf.Timestamp passengerDepartureTime = 5;
+    int32 departureDateDiscrepancyNumber = 6;
+    string departureTerminalCode = 7;
+    string arrivalCityCode = 8;
+    google.protobuf.Timestamp arrivalTime = 9;
+    google.protobuf.Timestamp passengerArrivalTime = 10;
+    int32 arrivalDateAdjustmentNumber = 11;
+    string arrivalTerminalCode = 12;
+    EquipmentInformation equipmentInformation = 13;
+    string mctCode = 14;
+    string trafficRestrictionCode = 15;
+
+}
+
+message EquipmentInformation {
+
+    string id = 1;
+    string equipmentTypeCode = 2;
+    string equipmentCode = 3;
+    string bookingDesignatorText = 4;
+    string bookingModifierText = 5;
+    string aircraftConfigurationText = 6;
+}
