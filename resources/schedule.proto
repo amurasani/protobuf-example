@@ -11,8 +11,9 @@ message Schedule {
 
     int32 id = 1;
     int64 version = 2;
-    repeated LegInformation legs = 3;
-    bool hosted = 4;
+    string flightNumber = 3;
+    repeated LegInformation legs = 4;
+    bool hosted = 5;
 
 }
 
